@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use cantus in your research, please cite it via the DOI."
+title: "cantus: Real-time score-following for voice and continuous-pitch instruments"
+authors:
+  - family-names: "Jalbert-Desforges"
+    given-names: "Fred"
+    orcid: "https://orcid.org/0009-0002-4357-6942"
+    affiliation: "Independent Researcher, Cygnus Analysis, Montreal, Canada"
+version: 0.0.1
+date-released: 2026-05-01
+license: Apache-2.0
+type: software
+repository-code: "https://github.com/fredericjalbertdesforges/cantus"
+url: "https://cygnusanalysis.com"
+keywords:
+  - music information retrieval
+  - score following
+  - online time warping
+  - real-time alignment
+  - voice
+  - continuous-pitch instruments

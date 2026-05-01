@@ -1,0 +1,120 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cantus"
+version = "0.0.1"
+description = "Real-time score-following for voice and continuous-pitch instruments."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Fred Jalbert-Desforges", email = "fredjocelyn@gmail.com" },
+]
+keywords = [
+    "music",
+    "mir",
+    "score-following",
+    "audio-alignment",
+    "online-time-warping",
+    "voice",
+    "violin",
+    "music-information-retrieval",
+    "real-time",
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Typing :: Typed",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.11",
+    "pretty_midi>=0.2.10",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "mypy>=1.8",
+    "ruff>=0.4",
+    "build>=1.0",
+]
+audio = [
+    "librosa>=0.10",
+    "sounddevice>=0.4",
+]
+docs = [
+    "sphinx>=7.0",
+    "sphinx-book-theme>=1.1",
+    "myst-parser>=2.0",
+]
+
+[project.urls]
+Homepage = "https://cygnusanalysis.com"
+Repository = "https://github.com/fredericjalbertdesforges/cantus"
+Issues = "https://github.com/fredericjalbertdesforges/cantus/issues"
+Changelog = "https://github.com/fredericjalbertdesforges/cantus/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cantus"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "I",
+    "N",
+    "UP",
+    "B",
+    "A",
+    "C4",
+    "SIM",
+]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_unused_configs = true
+warn_unreachable = true
+files = ["src/cantus", "tests"]
+
+[[tool.mypy.overrides]]
+module = ["pretty_midi.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "-ra",
+]
+
+[tool.coverage.run]
+source = ["src/cantus"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+]
