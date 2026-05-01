@@ -12,6 +12,10 @@ license: Apache-2.0
 type: software
 repository-code: "https://github.com/fredericjalbertdesforges/cantus"
 url: "https://cygnusanalysis.com"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19952112
+    description: "Zenodo archive of v0.0.1"
 keywords:
   - music information retrieval
   - score following

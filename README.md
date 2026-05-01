@@ -2,8 +2,10 @@
 
 Real-time score-following for voice and continuous-pitch instruments.
 
+[![CI](https://github.com/fredericjalbertdesforges/cantus/actions/workflows/ci.yml/badge.svg)](https://github.com/fredericjalbertdesforges/cantus/actions/workflows/ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19952112.svg)](https://doi.org/10.5281/zenodo.19952112)
 
 A focused, well-tested Python library for real-time alignment of monophonic continuous-pitch performance audio (voice, violin, flute, sax, oboe, clarinet) to a reference score.
 
@@ -69,7 +71,20 @@ Each algorithm is unit-tested against (a) theoretical anchors on canonical input
 
 ## Citation
 
-If you use `cantus` in your research, please cite the archived release via its DOI (forthcoming). The `CITATION.cff` file at the repo root carries the same metadata in machine-readable form.
+If you use `cantus` in your research, please cite the archived release via its DOI. The `CITATION.cff` file at the repo root carries the same metadata in machine-readable form (GitHub renders a "Cite this repository" widget directly from it).
+
+```bibtex
+@software{jalbertdesforges_2026_cantus,
+  author    = {Jalbert-Desforges, Fred},
+  title     = {cantus: Real-time score-following for voice and
+               continuous-pitch instruments},
+  version   = {v0.0.1},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.19952112},
+  url       = {https://doi.org/10.5281/zenodo.19952112}
+}
+```
 
 ## License
 
