@@ -10,13 +10,14 @@ from __future__ import annotations
 
 import numpy as np
 import pytest
+from numpy.typing import NDArray
 
 from cantus.algorithms import oltw_align
 
 
 def _binary_random_features(
     n_frames: int, dim: int, n_active: int, seed: int
-) -> np.ndarray:
+) -> NDArray[np.float32]:
     rng = np.random.default_rng(seed)
     out = np.zeros((n_frames, dim), dtype=np.float32)
     for k in range(n_frames):
